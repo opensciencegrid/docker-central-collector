@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [make-date-tag, build, test]
     if: >-
-      github.ref == 'refs/heads/main &&
+      github.ref == 'refs/heads/main' &&
       github.event_name != 'pull_request' &&
       github.repository_owner == 'opensciencegrid'
     strategy:
